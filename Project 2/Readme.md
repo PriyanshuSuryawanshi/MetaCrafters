@@ -52,7 +52,9 @@ contract MyToken {
 // public variables here
     string public tokenName = "META"; 
     string public tokenAbbrv = "MTA"; 
-    uint public totalSupply = 0; 
+    uint public totalSupply = 0;
+// mapping variable here
+mapping(address=> uint) public balances;
 ```
 Firstly we have created two publicly accessible string variables which store the name and abbreviation of the token.
 Then we have created an unsigned integer to store the total supply of the tokens.
@@ -67,8 +69,6 @@ Mint Function -
         totalSupply += _value;
         balances[_address] += _value;
     }
-// mapping variable here
-mapping(address=> uint) public balances;
 ```
 This function takes an address and an unsigned integer as input.
 This function increases the totalSupply and the balance of the passed address as per the passed unsigned integer.
