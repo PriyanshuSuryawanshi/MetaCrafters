@@ -79,3 +79,6 @@ But, you will no change if you have entered the amount to be burnt greater that 
 
 ## Authors
 Priyanshu Suryawanshi, Chandigarh university.  
+
+# License
+This project is licensed under the [Priyanshu Suryawanshi] License
