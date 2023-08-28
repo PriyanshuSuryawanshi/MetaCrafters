@@ -49,10 +49,15 @@ contract MyToken {
 ```
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile Project2.sol" button.
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Project2.sol" contract from the dropdown menu, and then click on the "Deploy" button.
+
+
 Once the contract is deployed, you can interact with it:-
-First you can copy an demo account's address from the accounts tab.
-In deployed contracts you can paste the address in textbox of balance and check it's balance, which would show zero as we havent minted any tokens yet.Also the total supply would be shown zero due to same reason.
+First, you can copy an demo account's address from the accounts tab.
+In deployed contracts, you can paste the address in textbox of balance and check it's balance, which would show zero as we havent minted any tokens yet.Also the total supply would be shown zero due to same reason.
+
+
 Now to test the mint function, paste the address in address textbox and set the amount of tokens you want to mint,And click mint button. After successful transaction you can check the balance of the address and also the total supply to see that the balance has increased by the amount you have entered to be minted. 
+
 Now to test the burn function, paste the address in address textbox and set the amount of tokens you want to burn,And click burn button. After successful transaction you can check the balance of the address and also the total supply to see that the balance has reduced by the amount you have entered to be burnt.
 But, you will no change if you have entered the amount to be burnt greater that the balance of that address. This is because of the if statement, due to which the burn function only runs if the amount to be burnt if less than or equal to the balance of that address.
 
