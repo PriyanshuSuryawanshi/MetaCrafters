@@ -67,6 +67,8 @@ Mint Function -
         totalSupply += _value;
         balances[_address] += _value;
     }
+// mapping variable here
+mapping(address=> uint) public balances;
 ```
 This function takes an address and an unsigned integer as input.
 This function increases the totalSupply and the balance of the passed address as per the passed unsigned integer.
