@@ -48,16 +48,40 @@ contract MyToken {
 }
 ```
 # About Variables :- 
+```
+// public variables here
+    string public tokenName = "META"; 
+    string public tokenAbbrv = "MTA"; 
+    uint public totalSupply = 0; 
+```
 Firstly we have created two publicly accessible string variables which store the name and abbreviation of the token.
 Then we have created an unsigned integer to store the total supply of the tokens.
 After which we have created a mapping to associate an uint with the address so as to save the balance of the particular account.
 
 # About Functions :-
 Mint Function -
+```
+ // mint function
+    function mint(address _address,uint _value) public 
+    {
+        totalSupply += _value;
+        balances[_address] += _value;
+    }
+```
 This function takes an address and an unsigned integer as input.
 This function increases the totalSupply and the balance of the passed address as per the passed unsigned integer.
 
 Burn Function -
+```
+// burn function
+    function burn(address _address,uint _value) public 
+    {
+        if (balances[_address]>=_value) {
+            totalSupply -= _value;
+            balances[_address] -= _value;
+        }
+    }
+```
 This function also takes an address and an unsigned integer as input.
 But this function decreases the totalSupply and the balance of the passed address as per the passed unsigned integer.
 Additionally this function uses an if statement, so that the function runs only when the balance of the address is more or equal to the passed unit, so as to avoid any error.
