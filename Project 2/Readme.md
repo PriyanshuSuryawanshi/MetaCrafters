@@ -47,10 +47,26 @@ contract MyToken {
 
 }
 ```
+# About Variables :- 
+Firstly we have created two publicly accessible string variables which store the name and abbreviation of the token.
+Then we have created an unsigned integer to store the total supply of the tokens.
+After which we have created a mapping to associate an uint with the address so as to save the balance of the particular account.
+
+# About Functions :-
+Mint Function -
+This function takes an address and an unsigned integer as input.
+This function increases the totalSupply and the balance of the passed address as per the passed unsigned integer.
+
+Burn Function -
+This function also takes an address and an unsigned integer as input.
+But this function decreases the totalSupply and the balance of the passed address as per the passed unsigned integer.
+Additionally this function uses an if statement, so that the function runs only when the balance of the address is more or equal to the passed unit, so as to avoid any error.
+
+# Compilation
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile Project2.sol" button.
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Project2.sol" contract from the dropdown menu, and then click on the "Deploy" button.
 
-
+# interacting with the Code
 Once the contract is deployed, you can interact with it:-
 First, you can copy an demo account's address from the accounts tab.
 In deployed contracts, you can paste the address in textbox of balance and check it's balance, which would show zero as we havent minted any tokens yet.Also the total supply would be shown zero due to same reason.
